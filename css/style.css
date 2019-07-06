@@ -1,0 +1,103 @@
+/* First File Style */
+@font-face {
+  font-family: myFirstFont;
+  src: url(../fonts/bein-ar-normal.ttf);
+}
+* {
+  margin:0;
+  padding:0;
+    font-family: myFirstFont;
+}
+
+
+.contents {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#front {
+  z-index: 1;
+  position: absolute;
+  background-color: #232135;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transition: 2s;
+  transform-origin: 0;
+}
+
+.open-card {
+  backface-visibility: visible;
+  transform-style: preserve-3d;
+  transform-origin: 0% 50%;
+  transform: perspective(800px) rotateY(-170deg);
+  transition: all 0.8s ease-in-out;
+  background-color: rgb(230, 240, 230);
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+}
+
+#front-title {
+  color: white;
+  font-family: Courier;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#front-pic {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 40px;
+    border-radius: 200px;
+}
+
+#inside {
+  z-index: 0;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#inside-pic {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 40px;
+    border-radius: 200px;
+}
+
+#message {
+  color: black;
+  font-family: Courier;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #28223d;
+  border-radius: 4px;
+  background: #615294;
+  color: white;
+  display: block;
+  margin: auto;
+  transition: background 1s ease;
+}
+
+button:hover {
+  background: #d3cee4;
+}
+
+.author {
+  font-family: monospace;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+

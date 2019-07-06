@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Happy BirthDay Nisrinoooo</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="front">
+            <div class="contents">
+              <p id="front-title">عيد ميلاد سعيد نيسرنو</p>
+              <img id="front-pic" src="Nisrino.jpg">
+              <button onclick="open_card();">Click me!!!!</button>
+            </div>
+          </div>
+          <div id="inside">
+            <div class="contents">
+              <img id="inside-pic" src="Nemo.jpg">
+              <p id="message" dir="rtl"></p>
+              <p class="author">صديقك المخلص : خرطوش</p>
+              <button onclick="close_card()">Click to close</button>
+            </div>
+          </div>
+        <script>
+            
+        function open_card() {
+            document.getElementById('front').className = 'open-card';
+            var i = 0;
+            var txt = 'تخيل أن الكون, لا طعم له أو لون, أو أن الحياااااه بدوووون نيسريييييين , نيسرنو العزيزة , عيد ميلاد سعيد , أتمنى لك من أعماق قلبي السعادة الدائمة , حياة مليئة بالأندومي والأغاني ونيمو بجانبك , مستقبل زاهر وبيت مليء بالقطط , من أعماق قلبي , أدعو من الله أن يتحقق كل ماتتمنين.'; /* The text */
+            var speed = 80; /* The speed/duration of the effect in milliseconds */
+
+            function typeWriter() {
+              if (i < txt.length) {
+                document.getElementById("message").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+              }
+            
+            }
+            typeWriter();
+        }
+
+            function close_card() {
+              document.getElementById('front').className = '';
+                document.getElementById("message").innerHTML = '';
+            }
+            
+            
+            
+            
+        </script>
+    </body>
+</html>
